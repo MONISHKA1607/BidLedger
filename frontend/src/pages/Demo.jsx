@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 const personaDetails = {
+
+  
   Bidder: {
     icon: WalletCards,
     title: "Bidder Demo",
