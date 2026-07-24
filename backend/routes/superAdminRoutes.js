@@ -1,0 +1,49 @@
+import express from 'express';
+import { isAuth, isAuthorised } from "../middlewares/auth.js";
+import {
+    removefromAuction,
+    fetchAdminOverview,
+    fetchAdminOperations,
+    fetchAllusers,
+    fetchUsersList,
+    updateUserStatus,
+    warnSellerRisk,
+    requireSellerKycReview,
+    fetchKycSubmissions,
+    updateKycStatus,
+    fetchAuditLogs,
+    monthlyRevenue,
+} from '../controllers/superadmincontroller.js';
+import {
+    fetchWithdrawalRequests,
+    reviewWithdrawalRequest,
+} from "../controllers/walletController.js";
+import {
+    fetchFulfillmentDisputes,
+    fetchFulfillmentSettlements,
+    reviewFulfillmentDispute,
+    reviewFulfillmentSettlement,
+} from "../controllers/fulfillmentController.js";
+const router = express.Router();
+
+router.delete("/auctionitem/delete/:id",isAuth,isAuthorised("Super Admin"),removefromAuction);
+
+router.get("/overview",isAuth,isAuthorised("Super Admin"),fetchAdminOverview)
+router.get("/operations",isAuth,isAuthorised("Super Admin"),fetchAdminOperations)
+router.get("/users/getall",isAuth,isAuthorised("Super Admin"),fetchAllusers)
+router.get("/users/list",isAuth,isAuthorised("Super Admin"),fetchUsersList)
+router.put("/users/status/:id",isAuth,isAuthorised("Super Admin"),updateUserStatus)
+router.post("/users/:id/warn-risk",isAuth,isAuthorised("Super Admin"),warnSellerRisk)
+router.put("/users/:id/kyc-rereview",isAuth,isAuthorised("Super Admin"),requireSellerKycReview)
+router.get("/kyc/submissions",isAuth,isAuthorised("Super Admin"),fetchKycSubmissions)
+router.put("/kyc/:id",isAuth,isAuthorised("Super Admin"),updateKycStatus)
+router.get("/audit-logs",isAuth,isAuthorised("Super Admin"),fetchAuditLogs)
+router.get("/wallet/withdrawals",isAuth,isAuthorised("Super Admin"),fetchWithdrawalRequests)
+router.put("/wallet/withdrawals/:id",isAuth,isAuthorised("Super Admin"),reviewWithdrawalRequest)
+router.get("/fulfillment/disputes",isAuth,isAuthorised("Super Admin"),fetchFulfillmentDisputes)
+router.put("/fulfillment/disputes/:id",isAuth,isAuthorised("Super Admin"),reviewFulfillmentDispute)
+router.get("/fulfillment/settlements",isAuth,isAuthorised("Super Admin"),fetchFulfillmentSettlements)
+router.put("/fulfillment/settlements/:id",isAuth,isAuthorised("Super Admin"),reviewFulfillmentSettlement)
+
+router.get("/monthlyincome", isAuth, isAuthorised("Super Admin"),monthlyRevenue);
+export default router;
