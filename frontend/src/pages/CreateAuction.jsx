@@ -151,8 +151,8 @@ const CreateAuction = () => {
     formData.append("startingBid", startingBid);
     formData.append("minimumBidIncrement", minimumBidIncrement);
     formData.append("antiSnipingExtensionMinutes", antiSnipingExtensionMinutes);
-    formData.append("startTime", startTime);
-    formData.append("endTime", endTime);
+    formData.append("startTime", new Date(startTime).toISOString());
+    formData.append("endTime", new Date(endTime).toISOString());
     dispatch(createAuction(formData));
   };
 
@@ -164,8 +164,8 @@ const CreateAuction = () => {
     formData.append("category", category);
     formData.append("condition", condition);
     formData.append("startingBid", startingBid);
-    if (startTime) formData.append("startTime", startTime);
-    if (endTime) formData.append("endTime", endTime);
+    if (startTime) formData.append("startTime", new Date(startTime).toISOString());
+    if (endTime) formData.append("endTime", new Date(endTime).toISOString());
     dispatch(saveAuctionDraft(formData));
   };
 
