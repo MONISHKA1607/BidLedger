@@ -323,13 +323,13 @@ const submitKyc = asyncErrorHandler(async (req, res, next) => {
     }
 
     const storedDocuments = {
-        idProof: await storeUploadedFile(idProof, "PRIMEBID_KYC_ID_PROOFS"),
-        selfie: await storeUploadedFile(selfie, "PRIMEBID_KYC_SELFIES"),
+        idProof: await storeUploadedFile(idProof, "BIDLEDGER_KYC_ID_PROOFS"),
+        selfie: await storeUploadedFile(selfie, "BIDLEDGER_KYC_SELFIES"),
     };
     if (addressProof) {
         storedDocuments.addressProof = await storeUploadedFile(
             addressProof,
-            "PRIMEBID_KYC_ADDRESS_PROOFS"
+            "BIDLEDGER_KYC_ADDRESS_PROOFS"
         );
     }
 

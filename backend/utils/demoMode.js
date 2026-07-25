@@ -81,7 +81,7 @@ export const getDemoDashboardPath = (persona) => {
 const hashValue = (value) =>
   crypto
     .createHash("sha256")
-    .update(`${process.env.JWT_SECRET || "primebid"}:${value || "unknown"}`)
+    .update(`${process.env.JWT_SECRET || "bidledger"}:${value || "unknown"}`)
     .digest("hex");
 
 const getRequestIp = (req) =>
@@ -157,9 +157,9 @@ const createDemoUser = async ({
     try {
       return await User.create({
         userName,
-        email: `demo-${suffix}-${sessionId}@primebid.local`,
+        email: `demo-${suffix}-${sessionId}@bidledger.local`,
         password,
-        address: "PrimeBid demo sandbox",
+        address: "BidLedger demo sandbox",
         phone: buildPhone(phoneSeed, attempt),
         role,
         accountStatus: "Active",

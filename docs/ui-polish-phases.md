@@ -1,4 +1,4 @@
-# PrimeBid UI Polish Phases
+# BidLedger UI Polish Phases
 
 ## Phase 1: Hero And Card Stability
 

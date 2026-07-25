@@ -1,4 +1,4 @@
-# PrimeBid End-to-End QA Checklist
+# BidLedger End-to-End QA Checklist
 
 Use this checklist before demos and deployment updates.
 

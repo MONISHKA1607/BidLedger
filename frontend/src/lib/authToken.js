@@ -1,6 +1,6 @@
-const AUTH_TOKEN_KEY = "primebid_auth_token";
-const DEMO_AUTH_TOKEN_KEY = "primebid_demo_auth_token";
-const ACTIVE_MODE_KEY = "primebid_active_mode";
+const AUTH_TOKEN_KEY = "bidledger_auth_token";
+const DEMO_AUTH_TOKEN_KEY = "bidledger_demo_auth_token";
+const ACTIVE_MODE_KEY = "bidledger_active_mode";
 
 export const AUTH_MODES = Object.freeze({
   PRODUCTION: "production",

@@ -1,16 +1,16 @@
-# PrimeBid Application Audit
+# BidLedger Application Audit
 
 Date: 2026-05-30
 
 ## Assumptions
 
-- PrimeBid is intended to be a small-scale auction marketplace MVP where auctioneers list items, bidders compete with wallet-backed bids, winners are settled automatically, and admins manage trust, KYC, payouts, and platform health.
+- BidLedger is intended to be a small-scale auction marketplace MVP where auctioneers list items, bidders compete with wallet-backed bids, winners are settled automatically, and admins manage trust, KYC, payouts, and platform health.
 - The current project is demo/MVP-stage, not yet production-grade for high-volume or high-value auctions.
 - This audit is based on the repository and local validation only. It does not claim current competitor facts from web research.
 
 ## Product Summary
 
-PrimeBid is a MERN auction marketplace with role-based flows for bidders, auctioneers, and super admins.
+BidLedger is a MERN auction marketplace with role-based flows for bidders, auctioneers, and super admins.
 
 Main journeys:
 
