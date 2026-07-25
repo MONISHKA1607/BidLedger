@@ -30,15 +30,13 @@ BidLedger was built to simulate the architecture of a real online marketplace ra
 
 ## Screenshots
 
-*(Add screenshots of the Home page, Bidder/Seller dashboards, and Create Auction flow here before sharing publicly — recruiters look at this section first.)*
-
 | Landing Page | Seller Dashboard |
 |---|---|
-| _add screenshot_ | _add screenshot_ |
+| ![Landing Page](docs/screenshots/landing-page.png) | ![Seller Dashboard](docs/screenshots/seller-dashboard.png) |
 
 | Bidder Dashboard | Auction Details |
 |---|---|
-| _add screenshot_ | _add screenshot_ |
+| ![Bidder Dashboard](docs/screenshots/bidder-dashboard.png) | ![Auction Details](docs/screenshots/auction-details.png) |
 
 ## Features
 
