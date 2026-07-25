@@ -131,7 +131,7 @@ const SideDrawer = () => {
             </span>
             <span className="min-w-0">
               <span className="font-display block text-xl font-semibold leading-tight text-ink">
-                Prime<span className="text-brass-strong">Bid</span>
+                Bid<span className="text-brass-strong">Ledger</span>
               </span>
               <span className="block truncate text-xs font-semibold text-stone-500">
                 Wallet-backed auctions
