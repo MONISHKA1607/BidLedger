@@ -11,6 +11,15 @@
 ![Google OAuth](https://img.shields.io/badge/OAuth-Google-4285F4?logo=google&logoColor=white)
 ![Tests](https://img.shields.io/badge/Tests-155_passing-brightgreen)
 
+## Live Demo
+
+🔗 **App:** https://bid-ledger.vercel.app
+🔗 **API:** https://bidledger.onrender.com/health
+
+> **Note:** the backend is hosted on Render's free tier, which spins down after periods of inactivity. If the site has been idle, the first request can take 30-60 seconds to respond while the server wakes up — this is expected, not a bug. Subsequent requests are fast.
+
+Try the **Try Demo** button on the login page for instant access to a sandboxed bidder/auctioneer/admin walkthrough without creating an account, or sign up for the full KYC → auction → bid flow.
+
 This public repository is a clean sharing and deployment copy. It intentionally contains no real `.env` files, no local secrets, no `node_modules`, and no generated frontend `dist` output.
 
 ## Highlights
