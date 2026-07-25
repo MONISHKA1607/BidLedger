@@ -32,15 +32,15 @@ BidLedger was built to simulate the architecture of a real online marketplace ra
 
 | Landing Page | Seller Dashboard |
 |---|---|
-| ![Landing Page](docs/screenshots/landing-page.png) | ![Seller Dashboard](docs/screenshots/seller-dashboard.png) |
+| ![Landing Page](docs/screenshots/landing-page.jpeg) | ![Seller Dashboard](docs/screenshots/seller-dashboard.jpeg) |
 
 | Bidder Dashboard | Auction Details |
 |---|---|
-| ![Bidder Dashboard](docs/screenshots/bidder-dashboard.png) | ![Auction Details](docs/screenshots/auction-details.png) |
+| ![Bidder Dashboard](docs/screenshots/bidder-dashboard.jpeg) | ![Auction Details](docs/screenshots/auction-details.jpeg) |
 
 | Create Auction | KYC Admin Review |
 |---|---|
-| ![Create Auction](docs/screenshots/create-auction.png) | ![KYC Admin Review](docs/screenshots/kyc-admin.png) |
+| ![Create Auction](docs/screenshots/create-auction.jpeg) | ![KYC Admin Review](docs/screenshots/kyc-admin.jpeg) |
 
 ## Features
 
