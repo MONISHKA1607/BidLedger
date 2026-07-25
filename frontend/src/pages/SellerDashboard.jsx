@@ -153,36 +153,36 @@ const SellerDashboard = () => {
   return (
     <section className="app-page">
       <div className="app-container grid gap-6">
-        <div className="grid gap-5 rounded-lg border border-slate-200 bg-white p-5 shadow-sm md:p-6 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-center">
+        <div className="grid gap-5 rounded-lg border border-stone-200 bg-white p-5 shadow-sm md:p-6 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-center">
           <div>
             <p className="app-kicker">
               Auctioneer Operations
             </p>
-            <h1 className="mt-2 text-3xl font-bold text-slate-950 md:text-4xl">
+            <h1 className="font-display mt-2 text-3xl font-semibold text-ink md:text-4xl">
               Seller operations console
             </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500">
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-stone-500">
               Ship won auctions, keep listings healthy, and manage proceeds
               without digging through marketplace screens.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 to="/create-auction"
-                className="inline-flex min-h-11 items-center gap-2 rounded-md bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-700"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md bg-ink px-4 py-2 font-semibold text-white transition hover:bg-brass-strong"
               >
                 <Plus className="h-5 w-5" />
                 Create Auction
               </Link>
               <Link
                 to="/view-my-auctions"
-                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-indigo-200 bg-indigo-50 px-4 py-2 font-semibold text-indigo-700 transition hover:bg-indigo-100"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-brass/30 bg-brass/10 px-4 py-2 font-semibold text-brass-strong transition hover:bg-brass/20"
               >
                 <Eye className="h-5 w-5" />
                 My Auctions
               </Link>
               <Link
                 to="/wallet#withdraw"
-                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-100"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-stone-200 bg-white px-4 py-2 font-semibold text-ink transition hover:bg-stone-100"
               >
                 <ArrowUpFromLine className="h-5 w-5" />
                 Withdraw
@@ -190,20 +190,20 @@ const SellerDashboard = () => {
             </div>
           </div>
 
-          <div className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <div className="grid gap-3 rounded-lg border border-stone-200 bg-stone-50 p-4">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-stone-500">
                   Reputation
                 </p>
-                <p className="mt-1 text-2xl font-bold text-slate-950 sm:text-3xl">
+                <p className="font-mono-brand mt-1 text-2xl font-semibold text-ink sm:text-3xl">
                   {formatSellerRating(stats?.reputation)}
                 </p>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-stone-500">
                   {formatReviewCount(stats?.reputation?.ratingCount)}
                 </p>
               </div>
-              <span className="flex h-11 w-11 items-center justify-center rounded-md bg-indigo-100 text-indigo-700">
+              <span className="flex h-11 w-11 items-center justify-center rounded-md bg-brass/15 text-brass-strong">
                 <Star className="h-5 w-5" />
               </span>
             </div>
@@ -305,15 +305,15 @@ const SellerDashboard = () => {
                     <div>
                       <Link
                         to={`/auction/details/${sellerDashboard.topAuction._id}`}
-                        className="text-2xl font-bold text-slate-950 hover:text-indigo-700"
+                        className="font-display text-2xl font-semibold text-ink hover:text-brass-strong"
                       >
                         {sellerDashboard.topAuction.title}
                       </Link>
-                      <p className="mt-3 text-sm text-slate-500">
+                      <p className="mt-3 text-sm text-stone-500">
                         {formatDateTime(sellerDashboard.topAuction.startTime)} to{" "}
                         {formatDateTime(sellerDashboard.topAuction.endTime)}
                       </p>
-                      <p className="mt-4 w-fit rounded-md bg-indigo-50 px-3 py-2 font-bold text-indigo-700">
+                      <p className="mt-4 w-fit rounded-md bg-brass/10 px-3 py-2 font-bold text-brass-strong">
                         {formatCurrency(sellerDashboard.topAuction.currentBid)}
                       </p>
                     </div>
@@ -381,12 +381,12 @@ const SellerDashboard = () => {
                     {sellerDashboard.recentReviews.map((review) => (
                       <div
                         key={review._id}
-                        className="rounded-md border border-slate-200 p-3"
+                        className="rounded-md border border-stone-200 p-3"
                       >
-                        <p className="font-semibold text-slate-950">
+                        <p className="font-semibold text-ink">
                           {review.rating} stars
                         </p>
-                        <p className="mt-1 text-sm text-slate-600">
+                        <p className="mt-1 text-sm text-stone-600">
                           {review.comment || "No comment"}
                         </p>
                       </div>
@@ -408,26 +408,26 @@ const SellerDashboard = () => {
 };
 
 const MetricCard = ({ icon: Icon, label, value, detail }) => (
-  <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+  <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm">
     <div className="flex items-start justify-between gap-3">
       <div>
-        <p className="text-sm font-semibold text-slate-500">{label}</p>
-        <p className="mt-2 text-3xl font-bold text-slate-950">{value}</p>
+        <p className="text-sm font-semibold text-stone-500">{label}</p>
+        <p className="font-mono-brand mt-2 text-3xl font-semibold text-ink">{value}</p>
       </div>
-      <span className="flex h-10 w-10 items-center justify-center rounded-md bg-indigo-50 text-indigo-700">
+      <span className="flex h-10 w-10 items-center justify-center rounded-md bg-brass/10 text-brass-strong">
         <Icon className="h-5 w-5" />
       </span>
     </div>
-    <p className="mt-3 text-sm text-slate-500">{detail}</p>
+    <p className="mt-3 text-sm text-stone-500">{detail}</p>
   </div>
 );
 
 const MiniMetric = ({ label, value }) => (
-  <div className="rounded-md border border-slate-200 bg-white p-3">
-    <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+  <div className="rounded-md border border-stone-200 bg-white p-3">
+    <p className="text-xs font-bold uppercase tracking-[0.12em] text-stone-500">
       {label}
     </p>
-    <p className="mt-1 text-lg font-bold text-slate-950">{value}</p>
+    <p className="font-mono-brand mt-1 text-lg font-semibold text-ink">{value}</p>
   </div>
 );
 
@@ -456,9 +456,9 @@ const FulfillmentSummaryGrid = ({ stats = {} }) => {
 const Panel = ({ title, children, id }) => (
   <section
     id={id}
-    className="scroll-mt-24 rounded-lg border border-slate-200 bg-white p-5 shadow-sm md:p-6"
+    className="scroll-mt-24 rounded-lg border border-stone-200 bg-white p-5 shadow-sm md:p-6"
   >
-    <h2 className="mb-4 text-xl font-semibold text-slate-950">{title}</h2>
+    <h2 className="font-display mb-4 text-xl font-semibold text-ink">{title}</h2>
     {children}
   </section>
 );
@@ -466,14 +466,14 @@ const Panel = ({ title, children, id }) => (
 const AuctionRow = ({ auction, label, tone = "slate" }) => {
   const toneClass = {
     amber: "bg-amber-50 text-amber-700",
-    indigo: "bg-indigo-50 text-indigo-700",
-    slate: "bg-slate-100 text-slate-700",
+    indigo: "bg-brass/10 text-brass-strong",
+    slate: "bg-stone-100 text-stone-600",
   }[tone];
 
   return (
     <Link
       to={`/auction/details/${auction._id}`}
-      className="grid gap-3 rounded-md border border-slate-200 p-3 transition hover:border-indigo-200 hover:bg-indigo-50/40 sm:grid-cols-[64px_1fr_auto] sm:items-center"
+      className="grid gap-3 rounded-md border border-stone-200 p-3 transition hover:border-brass/30 hover:bg-brass/[0.04] sm:grid-cols-[64px_1fr_auto] sm:items-center"
     >
       <AuctionImage
         image={auction.image}
@@ -483,8 +483,8 @@ const AuctionRow = ({ auction, label, tone = "slate" }) => {
         className="h-16 w-16 p-1"
       />
       <div className="min-w-0">
-        <p className="truncate font-semibold text-slate-950">{auction.title}</p>
-        <p className="mt-1 flex items-center gap-1.5 text-sm text-slate-500">
+        <p className="truncate font-semibold text-ink">{auction.title}</p>
+        <p className="mt-1 flex items-center gap-1.5 text-sm text-stone-500">
           <Clock3 className="h-4 w-4" />
           Ends {formatDateTime(auction.endTime)}
         </p>
@@ -506,7 +506,7 @@ const AuctionRow = ({ auction, label, tone = "slate" }) => {
 const HealthAuctionRow = ({ auction }) => (
   <Link
     to={`/auction/details/${auction._id}`}
-    className="grid gap-3 rounded-md border border-slate-200 p-3 transition hover:border-indigo-200 hover:bg-indigo-50/40 md:grid-cols-[72px_1fr_auto] md:items-center"
+    className="grid gap-3 rounded-md border border-stone-200 p-3 transition hover:border-brass/30 hover:bg-brass/[0.04] md:grid-cols-[72px_1fr_auto] md:items-center"
   >
     <AuctionImage
       image={auction.image}
@@ -516,8 +516,8 @@ const HealthAuctionRow = ({ auction }) => (
       className="h-[72px] w-[72px] p-1"
     />
     <div className="min-w-0">
-      <p className="truncate font-semibold text-slate-950">{auction.title}</p>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
+      <p className="truncate font-semibold text-ink">{auction.title}</p>
+      <p className="mt-1 text-sm leading-6 text-stone-500">
         {auction.auctionHealth?.summary}
       </p>
       {auction.auctionHealth?.recommendations?.[0] && (
@@ -531,13 +531,13 @@ const HealthAuctionRow = ({ auction }) => (
 );
 
 const EmptyState = ({ title, text, action }) => (
-  <div className="rounded-md border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
-    <p className="font-semibold text-slate-950">{title}</p>
-    <p className="mt-1 text-sm text-slate-500">{text}</p>
+  <div className="rounded-md border border-dashed border-stone-300 bg-stone-50 p-6 text-center">
+    <p className="font-semibold text-ink">{title}</p>
+    <p className="mt-1 text-sm text-stone-500">{text}</p>
     {action && (
       <Link
         to={action.to}
-        className="mt-4 inline-flex rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
+        className="mt-4 inline-flex rounded-md bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-brass-strong"
       >
         {action.label}
       </Link>
@@ -546,7 +546,7 @@ const EmptyState = ({ title, text, action }) => (
 );
 
 const sellerInputClass =
-  "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-950 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100";
+  "w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-ink outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/15";
 
 const toDateInputValue = (value) => {
   if (!value) return "";
@@ -612,11 +612,11 @@ const SellerQualityPanel = ({ quality }) => {
             </span>
           ))}
         </div>
-        <div className="rounded-md bg-slate-50 p-3">
-          <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+        <div className="rounded-md bg-stone-50 p-3">
+          <p className="text-xs font-bold uppercase tracking-[0.12em] text-stone-500">
             Improvement signals
           </p>
-          <div className="mt-2 grid gap-1 text-sm text-slate-700">
+          <div className="mt-2 grid gap-1 text-sm text-stone-600">
             {(quality.reasons || []).slice(0, 4).map((reason) => (
               <p key={reason}>{reason}</p>
             ))}
@@ -680,7 +680,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
   };
 
   return (
-    <div className="grid gap-4 rounded-lg border border-slate-200 bg-white p-4 shadow-sm lg:grid-cols-[112px_minmax(0,1fr)]">
+    <div className="grid gap-4 rounded-lg border border-stone-200 bg-white p-4 shadow-sm lg:grid-cols-[112px_minmax(0,1fr)]">
       <AuctionImage
         image={auction.image}
         alt={auction.title || "Auction item"}
@@ -693,11 +693,11 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
           <div>
             <Link
               to={auctionId ? `/auction/details/${auctionId}` : "/seller-dashboard"}
-              className="text-lg font-bold text-slate-950 hover:text-indigo-700"
+              className="font-display text-lg font-semibold text-ink hover:text-brass-strong"
             >
               {auction.title || "Auction item"}
             </Link>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-stone-500">
               Buyer: {bidder.userName || "Winner"}
               {bidder.phone ? ` | ${bidder.phone}` : ""}
             </p>
@@ -712,8 +712,8 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
         </div>
 
         {hasAddress ? (
-          <div className="grid gap-1 rounded-md bg-slate-50 p-3 text-sm leading-6 text-slate-700">
-            <p className="font-semibold text-slate-950">
+          <div className="grid gap-1 rounded-md bg-stone-50 p-3 text-sm leading-6 text-stone-600">
+            <p className="font-semibold text-ink">
               Ship to {address.fullName}
             </p>
             <p>
@@ -745,7 +745,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
 
         <form className="grid gap-3 md:grid-cols-2" onSubmit={handleSubmit}>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Status
             </span>
             <select
@@ -762,7 +762,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             </select>
           </label>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Carrier
             </span>
             <input
@@ -774,7 +774,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             />
           </label>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Tracking number
             </span>
             <input
@@ -787,7 +787,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             />
           </label>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Tracking URL
             </span>
             <input
@@ -799,7 +799,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             />
           </label>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Estimated delivery
             </span>
             <input
@@ -813,7 +813,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             />
           </label>
           <label className="grid gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
               Seller note
             </span>
             <input
@@ -828,7 +828,7 @@ const SellerFulfillmentCard = ({ fulfillment }) => {
             <button
               type="submit"
               disabled={!hasAddress}
-              className="inline-flex min-h-11 items-center gap-2 rounded-md bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-indigo-300"
+              className="inline-flex min-h-11 items-center gap-2 rounded-md bg-ink px-4 py-2 font-semibold text-white transition hover:bg-brass-strong disabled:cursor-not-allowed disabled:bg-stone-300"
             >
               <Truck className="h-5 w-5" />
               Update Shipment
@@ -869,7 +869,7 @@ const DisputeResponsePanel = ({
     <p className="text-sm leading-6 text-red-900">{dispute.description}</p>
 
     {dispute.adminResolution && (
-      <div className="rounded-md border border-emerald-200 bg-white p-3 text-sm text-emerald-800">
+      <div className="rounded-md border border-pine/30 bg-white p-3 text-sm text-pine">
         <p className="font-semibold">Admin resolution</p>
         <p className="mt-1">{dispute.adminResolution}</p>
       </div>
@@ -914,14 +914,14 @@ const SellerSettlementPanel = ({ fulfillment }) => {
   const settlementStatus = fulfillment?.settlementStatus;
 
   return (
-    <section className="grid gap-3 rounded-md border border-indigo-100 bg-indigo-50 p-3">
+    <section className="grid gap-3 rounded-md border border-brass/20 bg-brass/10 p-3">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-indigo-700">
+          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brass-strong">
             <ShieldCheck className="h-4 w-4" />
             Escrow payout
           </p>
-          <p className="mt-1 text-sm leading-6 text-indigo-900">
+          <p className="mt-1 text-sm leading-6 text-brass-strong">
             Payout unlocks after buyer confirmation or admin dispute resolution.
           </p>
         </div>
@@ -952,11 +952,11 @@ const SellerSettlementPanel = ({ fulfillment }) => {
 };
 
 const MiniSettlementMetric = ({ label, value }) => (
-  <div className="rounded-md border border-indigo-100 bg-white p-3">
-    <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">
+  <div className="rounded-md border border-brass/20 bg-white p-3">
+    <p className="text-xs font-bold uppercase tracking-[0.12em] text-stone-500">
       {label}
     </p>
-    <p className="mt-1 font-bold text-slate-950">{value}</p>
+    <p className="font-mono-brand mt-1 font-semibold text-ink">{value}</p>
   </div>
 );
 
